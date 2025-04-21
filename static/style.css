@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,600;1,600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+}
+
+
+main {
+    flex: 1;
+}
+
+.menu {
+    background-color: #50a1d0;
+    padding: 15px;
+    padding-left: 30px;
+    padding-bottom: 5px;
+}
+
+.title{
+    padding: 20px;
+}
+
+.presentation{
+    font-family: "Montserrat", sans-serif;
+}
+
+.link__socials{
+    padding: 21.5px 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+.text_space {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    max-width: 600px;
+    max-height: 600px;
+    padding: 15px;
+    border: 2px solid #4a89dc;
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+
+textarea:focus {
+    outline: none;
+    border-color: #3b7dd8;
+    box-shadow: 0 4px 8px rgba(59, 125, 216, 0.2);
+}
+
+textarea::placeholder {
+    color: #7f8c8d;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.link-button {
+    background-color: #4a89dc;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.link-button:hover {
+    background-color: #3b7ba3;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.footer{
+    background-color: #4e4e4e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.output-container {
+    position: relative;
+    display: inline-block;
+}
+
+.copy-btn {
+    position: absolute;
+    bottom: 880px;
+    right: 175px;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 4px;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+}
+
+.copy-btn img {
+    width: 30px;
+}
+
+.copied-message {
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+    background: #4a89dc;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.copied-message.show {
+    opacity: 1;
+}
+
+.instagram-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.instagram-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}

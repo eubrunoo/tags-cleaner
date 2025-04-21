@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Limpador de tags">
+    <meta name="author" content="Bruno Machado Moreira">
+    <title>Easteregg</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='assets/logo.png') }}" type="image/x-icon">
+</head>
+<body style="background-color:#fef5e3;">
+    <main class="presentation" align="center">
+    <h1 class="title" >Eai curioso(a)!</h1>
+    <hr>
+    <br>
+    <h2>Você encontrou o easteregg!</h2>
+    <br>
+    <div>
+        <img src="{{ url_for('static', filename='assets/easteregg.gif') }}" alt="easteregg" width="400" >
+    </div>
+    <br>
+    <div>
+        <h2>Aproveita e me segue nas redes sociais!</h2>
+        <br>
+        <a class="link-button instagram-button" href="https://www.instagram.com/eubruno.bm/" target="_blank">
+            <img src="{{ url_for('static', filename='assets/instagram.png') }}" alt="Instagram" class="instagram-icon">
+            <span>@eubruno.bm</span>
+        </a>
+        <br><br><br><br><br>
+        <button id="catButton" class="link-button">Clique para ver seu gato do dia!</button>
+        <br><br><br>
+        <div id="animalContainer">
+            <img id="animalImage" src="{{ url_for('static', filename='assets/Dance Silly Goose GIF.gif') }}" alt="Pato" width="400">
+        </div>
+    </div>
+    </main>
+    <br>
+    <footer class="footer">
+        <a href="{{ url_for('index') }}" target="_blank" class="link-button">Voltar</a>
+        <br><br><br>
+        <p>Desenvolvido por "Bruno Machado Moreira"</p>
+        <p align="left">&copy;All Rights Reserved since 2025</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

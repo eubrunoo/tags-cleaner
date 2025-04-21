@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Limpador de tags">
+    <meta name="author" content="Bruno Machado Moreira">
+    <title>Tags Cleaner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='assets/logo.png') }}" type="image/x-icon">
+</head>
+    <body>
+    <header class="menu">
+        <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Tags Cleaner logo" width="100">
+
+
+    </header>
+
+    <hr>
+    <br>
+
+    <main class="presentation" align="center">
+
+    <h1 align="center">Tags Cleaner Bot</h1>
+
+    <hr>
+    <br>
+
+    <form method="POST">
+        <div class="text_space">
+            <textarea name="input_text" rows="35" cols="80" placeholder="Cole aqui com as tags..." required>{{ request.form.get('input_text', '') }}</textarea>
+            
+            <div class="output-wrapper">
+                <textarea id="copy_text" readonly rows="35" cols="80" placeholder="Resultado com texto limpo">{{ resultado if resultado else '' }}</textarea>
+                <button id="copy_btn" class="copy-btn" title="Copiar texto">
+                    <img src="{{ url_for('static', filename='assets/copy_img.svg') }}" alt="Copiar">
+                </button>
+            </div>
+        </div>
+        <br>
+        <div>
+            <button type="submit" class="link-button">Limpar Tags</button>
+        </div>
+    </form>
+    
+    <br>
+
+    </main>
+
+    <footer class="footer">
+        <br>
+        <a href="{{ url_for('easteregg') }}" target="_blank" class="link-button">Não clique aqui</a>
+        <br><br><br>
+        <p>Desenvolvido por "Bruno Machado Moreira"</p>
+        <p align="left">&copy;All Rights Reserved since 2025</p>
+      </footer>
+      <script src="{{ url_for('static', filename='script.js') }}"></script>
+    
+    </body>
+
+</html>
