@@ -1,156 +1,362 @@
-@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,600;1,600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap');
+
+/* =========================
+   RESET / BASE
+========================= */
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html,
-body {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 0%;
+html, body {
+    min-height: 100%;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-  background-color: #f5f5f5;
+    font-family: 'Poppins', sans-serif;
 }
-main {
-  flex: 1;
-}
-.menu {
-  background-color: #50a1d0;
-  padding: 15px;
-  padding-left: 30px;
-  padding-bottom: 5px;
-}
-.title {
-  padding: 20px;
-}
+
 .presentation {
-  font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
-.link__socials {
-  padding: 21.5px 0;
-  font-family: "Montserrat", sans-serif;
+
+.title {
+    padding: 0;
 }
-.text_space {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-textarea {
-  width: 100%;
-  max-width: 600px;
-  max-height: 600px;
-  padding: 15px;
-  border: 2px solid #4a89dc;
-  border-radius: 12px;
-  font-family: "Poppins", sans-serif;
-  font-size: 14px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  background-color: #fff;
-}
-textarea:focus {
-  outline: none;
-  border-color: #3b7dd8;
-  box-shadow: 0 4px 8px rgba(59, 125, 216, 0.2);
-}
-textarea::placeholder {
-  color: #7f8c8d;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-}
+
 .link-button {
-  background-color: #4a89dc;
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 8px;
-  font-family: "Poppins", sans-serif;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.25s ease;
 }
-.link-button:hover {
-  background-color: #3b7ba3;
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-.footer {
-  background-color: #4e4e4e;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-}
-h1 {
-  margin-bottom: 20px;
-  color: #2c3e50;
-}
-.output-wrapper {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  max-width: 600px;
-}
-.copy-btn {
-  position: absolute;
-  bottom: 25px;
-  right: 0px;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid #ddd;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  padding: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
-}
-.copy-btn:hover {
-  background: rgba(255, 255, 255, 1);
-  transform: scale(1.1);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-.copy-btn img {
-  width: 20px;
-  height: 20px;
-}
-#copy_text {
-  padding-bottom: 40px;
-  resize: none;
-}
-.copied-message {
-  position: absolute;
-  bottom: 40px;
-  right: 10px;
-  background: #4a89dc;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-size: 12px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-.copied-message.show {
-  opacity: 1;
-}
+
 .instagram-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
 }
+
 .instagram-icon {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.footer {
+    text-align: center;
+}
+
+/* =========================
+   TEMA COMPARTILHADO
+========================= */
+.page-index,
+.page-easteregg {
+    color: #f4f7fb;
+    display: flex;
+    flex-direction: column;
+    background:
+        radial-gradient(circle at top center, rgba(103, 183, 255, 0.12), transparent 28%),
+        radial-gradient(circle at 20% 30%, rgba(167, 139, 250, 0.08), transparent 22%),
+        linear-gradient(180deg, #050b14 0%, #08111f 45%, #0b1422 100%);
+    overflow-x: hidden;
+    position: relative;
+}
+
+.page-index::before,
+.page-easteregg::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.18;
+    background:
+        repeating-linear-gradient(
+            90deg,
+            transparent 0px,
+            transparent 48px,
+            rgba(103, 183, 255, 0.05) 49px,
+            transparent 50px
+        ),
+        linear-gradient(
+            180deg,
+            transparent 0%,
+            rgba(136, 225, 255, 0.04) 50%,
+            transparent 100%
+        );
+}
+
+.page-index::after,
+.page-easteregg::after {
+    content: "/a/   /e/   /i/   /o/   /u/   [ʃ]   [ɲ]   [ʁ]   [t͡ʃ]   [d͡ʒ]";
+    position: fixed;
+    bottom: 18px;
+    left: 24px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: rgba(182, 197, 218, 0.08);
+    pointer-events: none;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.page-index .menu,
+.page-easteregg .menu {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(7, 13, 23, 0.82);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(125, 163, 219, 0.18);
+    padding: 20px 32px;
+}
+
+.page-index main,
+.page-easteregg main {
+    flex: 1;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 48px 24px 64px;
+}
+
+.page-index h1,
+.page-easteregg h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 18px;
+    color: #f4f7fb;
+    text-align: center;
+}
+
+.page-index hr,
+.page-easteregg hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(125, 163, 219, 0.35), transparent);
+    margin: 0 auto 28px;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.page-index .link-button,
+.page-easteregg .link-button {
+    color: #06101c;
+    background: linear-gradient(135deg, #88e1ff 0%, #67b7ff 100%);
+    box-shadow: 0 10px 28px rgba(103, 183, 255, 0.22);
+}
+
+.page-index .link-button:hover,
+.page-easteregg .link-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 32px rgba(103, 183, 255, 0.28);
+}
+
+.page-index .footer,
+.page-easteregg .footer {
+    margin-top: 20px;
+    padding: 26px 24px 34px;
+    border-top: 1px solid rgba(125, 163, 219, 0.18);
+    background: rgba(6, 10, 17, 0.75);
+    backdrop-filter: blur(10px);
+    color: #b6c5da;
+}
+
+/* =========================
+   HERO COMPARTILHADO
+========================= */
+.hero {
+    text-align: center;
+    margin-bottom: 34px;
+}
+
+.hero-kicker {
+    color: #88e1ff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    max-width: 760px;
+    margin: 0 auto;
+    color: #b6c5da;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* =========================
+   INDEX
+========================= */
+.page-index .text_space {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: stretch;
+    margin-bottom: 24px;
+}
+
+.page-index textarea {
+    width: 100%;
+    min-height: 560px;
+    border: 1px solid rgba(125, 163, 219, 0.12);
+    border-radius: 18px;
+    background: linear-gradient(180deg, rgba(13, 22, 36, 0.98) 0%, rgba(10, 18, 30, 0.98) 100%);
+    color: #f4f7fb;
+    padding: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    resize: vertical;
+    transition: 0.25s ease;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.page-index textarea:focus {
+    outline: none;
+    border-color: rgba(103, 183, 255, 0.45);
+    box-shadow:
+        0 0 0 4px rgba(103, 183, 255, 0.08),
+        0 12px 34px rgba(0,0,0,0.18);
+}
+
+.page-index textarea::placeholder {
+    color: #7e90aa;
+}
+
+.page-index .output-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.page-index #copy_text {
+    padding-bottom: 62px;
+}
+
+.page-index .copy-btn {
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    width: 46px;
+    height: 46px;
+    border: 1px solid rgba(125, 163, 219, 0.22);
+    border-radius: 14px;
+    background: rgba(20, 31, 49, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.25s ease;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.2);
+}
+
+.page-index .copy-btn:hover {
+    transform: translateY(-2px);
+    border-color: rgba(103, 183, 255, 0.55);
+    background: rgba(26, 40, 63, 1);
+}
+
+.page-index .copy-btn img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+    opacity: 0.92;
+}
+
+/* =========================
+   EASTER EGG
+========================= */
+.page-easteregg .easteregg-main {
+    max-width: 980px;
+}
+
+.page-easteregg .hero-easteregg {
+    margin-bottom: 26px;
+}
+
+.page-easteregg .easteregg-card {
+    background: linear-gradient(180deg, rgba(18, 29, 48, 0.95) 0%, rgba(12, 20, 34, 0.92) 100%);
+    border: 1px solid rgba(125, 163, 219, 0.12);
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    padding: 32px 24px 40px;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.page-easteregg .easteregg-card h2 {
+    color: #f4f7fb;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 6px;
+}
+
+.page-easteregg .easteregg-image,
+.page-easteregg .easteregg-animal {
+    max-width: 100%;
+    border-radius: 18px;
+    border: 1px solid rgba(125, 163, 219, 0.15);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+}
+
+.page-easteregg #animalContainer {
+    margin-top: 10px;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+@media (max-width: 980px) {
+    .page-index .text_space {
+        grid-template-columns: 1fr;
+    }
+
+    .page-index textarea {
+        min-height: 340px;
+    }
+}
+
+@media (max-width: 640px) {
+    .page-index .menu,
+    .page-easteregg .menu {
+        padding: 18px 18px;
+    }
+
+    .page-index main,
+    .page-easteregg main {
+        padding: 34px 16px 42px;
+    }
+
+    .page-index h1,
+    .page-easteregg h1 {
+        font-size: 2rem;
+    }
+
+    .page-index textarea {
+        min-height: 300px;
+        padding: 16px;
+    }
+
+    .page-easteregg .easteregg-card {
+        padding: 22px 16px 28px;
+        border-radius: 18px;
+    }
+
+    .page-easteregg .easteregg-card h2 {
+        font-size: 1.2rem;
+    }
 }
